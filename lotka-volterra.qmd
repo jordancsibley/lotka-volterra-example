@@ -22,7 +22,6 @@ We'll be using the following packages (aka libraries):
 # load libraries ----
 library(tidyverse)
 library(deSolve)
-library(kableExtra)
 ```
 
 ## I. The Lotka-Volterra equations
@@ -75,7 +74,7 @@ parameters <- c(r = .75, alpha = 0.8, beta = 0.5, q = 1)
 
 # Set the initial condition (prey and predator populations at t = 0) ----
 # Recall: V = prey, P = predator
-init_cond <- c(V = 10, P = 4)
+init_cond <- c(V = 10, P = 10)
 
 # Prepare the series of differential equations as a function ----
 lv_equations <- function(time, init_cond, parameters) {
